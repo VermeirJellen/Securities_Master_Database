@@ -1,2 +1,3 @@
 This folders contains the database configuration file with server information and user credentials. The filename of this configuration file must be "credentials.cnf", the first line in the file must be "[algotrading_securities_master]". 
-A dummy configuration file has been provided for convenience purposes. If you choose to update this file instead of a new one, note that the filename must be renamed from "credentials.cnnf" to "credentials.cnf"!
+
+A dummy configuration file has been provided for convenience purposes. If you choose to update this file instead of creating a new one, note that the filename must be renamed from "credentials.cnnf" to "credentials.cnf"!
