@@ -1,0 +1,1 @@
+This folder contains a configuration file with your quandl authentication code. The name of this configuration file must be "quandl.cnf". A dummy file has been provided and can be modified to contain the correct authentication code. Note that a return character must be entered at the end of the first line and the file extension must be modified from .cnnf to .cnf.
