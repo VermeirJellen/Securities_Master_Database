@@ -89,6 +89,8 @@ CREATE TABLE exchange (
   da_last_update datetime NULL -- Triggers avoid NULL values
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+select * from datapoint
+
 DELIMITER $
 CREATE TRIGGER before_exchange_insert
 	BEFORE INSERT ON exchange
