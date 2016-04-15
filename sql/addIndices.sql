@@ -94,5 +94,3 @@ call updateSectorGICS("XLV","Health Care");
 call updateSectorGICS("XLF","Financials");
 call updateSectorGICS("XLK","Information Technology");
 call updateSectorGICS("XLU","Utilities");
-
-select * from datasource;
