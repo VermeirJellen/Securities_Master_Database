@@ -34,7 +34,7 @@ Next, open the `./DBSetup.R` script. If you are missing packages or are running 
 ### Fetching data from Database
 `./facade/DBFacade.R` provides functions that can be used to fetch or update the database information in a generic way: View `./facade/DBFacadeExample.R` for simple examples. For more advanced queries, SQL statements can be executed via the respective RMySQL functionality, or other similar packages.
 
-### Licencing
+### Licensing
 Copyright 2016 Jellen Vermeir. <jellenvermeir@gmail.com>
 
 Securities Master Database is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. Securities Master Database is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
