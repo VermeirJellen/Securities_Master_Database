@@ -15,9 +15,9 @@ Next, open the `./DBSetup.R` script. If you are missing packages or are running 
 
 1. Lines 15-18 will source the necessary R scripts that are located in the `./facade` and `./scripts` subfolders. 
 - Line 20 creates a DB connection to your database
-- Line 21 launches a simple script that will add relevant exchange key metadata to the symbols.
-- Line 22 launches a script that scrapes dividend and merge-split data from the fidelity corporate action   calendar and inserts the information in the Database. The script will parse and insert data for the next 30 days, starting at the current date. Previously inserted data will be modified or overwritten if changes are detected.
-- Line 23 launches a script that downloads and processes the actual timeseries data for the symbols.
+- Line 22 launches a simple script that will add relevant exchange key metadata to the symbols.
+- Line 23 launches a script that scrapes dividend and merge-split data from the fidelity corporate action   calendar and inserts the information in the Database. The script will parse and insert data for the next 30 days, starting at the current date. Previously inserted data will be modified or overwritten if changes are detected.
+- Line 24 launches a script that downloads and processes the actual timeseries data for the symbols:
      - Perform simple interpolation for missing datapoints, taking the ANBIMA holiday calendar into account.
      - If adjusted data is not provided, perform a backadjustment algorithm to calculate the adjusted prices (open, high, low close) and adjusted volume. For the BEL20 Yahoo timeseries data, the adjusted prices are calculated by simply taking the given adjusted close prices into account. All the other timeseries already contain precomputed dividend and merge-split adjusted data, hence no additional action is required. (Note that the `./scripts/backadjustTimeseries.R` script contains the necessary functionality to perform the CRSP backadjustment algorithm. The script can be fed with corporate action data from Yahoo or the corporate action information in DB. View lines 116-124 in `./scripts/ProcessEODDataQuandl.R` for an example on how to call the script).
      - Perform outlier detection for the adjusted price data, based upon a rolling median absolute deviation criterion. Currently, datapoints are flagged as outliers or extreme outliers when the 4 and 8 MAD levels are breached in a 30 day rolling window. The relevant datapoints are NOT modified.
